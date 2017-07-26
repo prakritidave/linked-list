@@ -19,6 +19,7 @@ public:
 		head=NULL;
 	}
 
+	//reverses linked list in size of k
 	Node* reverseInSizeOfK(Node *head, int k){
 
 	 if(head == NULL || head->next == NULL)return head;
@@ -47,7 +48,7 @@ public:
 	}
 	
 	
-
+       //insert element in linked list
 	void insert(int n){
 	
 		Node *node=new Node();
@@ -65,7 +66,7 @@ public:
 			p->next=node;			
 		}
 	}
-
+               //delete a node from linked list
 		void deleteNode(int n){
 
 			Node *p=head->next;
@@ -111,7 +112,7 @@ public:
 			}
 			
 		}
-
+             //reverse a linked list
 		void reversell()
 		{
 			Node *p=head;
@@ -133,7 +134,7 @@ public:
 			head->next=NULL;
 			head=p;
 		}
-
+              //display linked list
 		void displayll()
 		{
 			Node *p=head;
@@ -144,11 +145,11 @@ public:
 			}
 
 		}
-			
+             //recursively reverse a linked list
 		void recrevll(){
 			head = recrev(head);
 		}
-
+               //recursive reverse linked list and returns the new head
 		Node* recrev(Node* headptr){
 
 			Node *p=headptr;
@@ -170,6 +171,7 @@ public:
 			
 			return headptr;
 		}
+	//prints nth node from the end of a linked list
 		void nthToLast(int n){
 			int x;
 			
@@ -207,7 +209,7 @@ public:
 			}
 				
 		}
-
+             //checks if there is a loop in the linked list
 		void findLoop(){
 		
 			Node *slow=head;
@@ -225,7 +227,7 @@ public:
 				return;
 		}
 
-
+             //remove duplicates from a linked list
 		void remDuplicates(){
 		
 			if(head == NULL)return;
@@ -255,6 +257,7 @@ public:
         }
 	}
 
+	//swaps the nth element from the first and last
 		void swapNthFromFirstAndLast(int n)
 		{
 			int x,temp;
